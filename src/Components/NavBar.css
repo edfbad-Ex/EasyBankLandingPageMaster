@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
 
 :root {
 
@@ -12,6 +13,27 @@
     --Light-Grayish-Blue: hsl(220, 16%, 96%);
     --Very-Light-Gray: hsl(0, 0%, 98%);
     
+
+}
+
+#CreatedBy{
+
+    position: fixed;
+    display: flex;
+    opacity: 0;
+    margin: 0px;
+    padding: 0px;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    bottom: 20px;
+    left: 1vh;
+    right: 1vh;
+    font-family: "Zen Dots", sans-serif;
+    font-size: 12px;
+    color: var(--Grayish-Blue-Color);
+    transition: ease-in-out 750ms;
+
 
 }
 
@@ -33,6 +55,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    position: fixed;
 
 }
 
@@ -58,6 +81,21 @@
 
 .NavBar-Child:nth-child(3){
 
+
+}
+
+.NavBar-Child:nth-child(4){
+
+    display: none;
+    height: 50%;
+    border: none;
+
+}
+
+.NavBar-Child:nth-child(4):hover{
+
+    cursor: pointer;
+    transform: translate(1px, -1px);
 
 }
 
@@ -95,9 +133,17 @@
 
 }
 
+
 .NavBar-Links-Childs:hover{
 
     cursor: pointer;
+    border-bottom: 4px solid var(--Lime-Green-Color);
+    color: black;
+
+}
+
+.NavBar-Links-Childs:focus{
+
     border-bottom: 4px solid var(--Lime-Green-Color);
     color: black;
 
@@ -114,6 +160,7 @@
     font-weight: 700;
     font-size: 14px;
     transition: ease-in-out 250ms;
+    outline: none;/*quitar la marca de enfocado del elemento*/
 
 }
 
@@ -121,5 +168,266 @@
     
     cursor: pointer;
     opacity: 0.6;
+
+}
+
+@media (min-width: 0px) and (max-width: 1000.99px){
+
+
+    #CreatedBy{
+
+        position: fixed;
+        opacity: 0;
+        margin: 0px;
+        padding: 0px;
+        bottom: 37px;
+        left: 2vh;
+        right: 2vh;
+        font-family: "Zen Dots", sans-serif;
+        font-size: 12px;
+        text-align: center;
+        color: var(--Grayish-Blue-Color);
+        transition: ease-in-out 750ms;
+        border-bottom: 2px solid var(--Grayish-Blue-Color);
+        padding-bottom: 3px;
+    
+    }
+
+    .Container-NavBar{
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 0px;
+        background-color: white;
+        z-index: 2;
+    
+    }
+    
+    .NavBar{
+    
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 0vh;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+    
+    }
+    
+    .NavBar-Child{
+    
+        width: 70%;
+        height: 70px;
+        background-color: white;
+     
+    }
+    
+    .NavBar-Child:nth-child(1){
+    
+    }
+    
+    .NavBar-Child:nth-child(2){
+    
+        display: flex;
+    }
+    
+    .NavBar-Child:nth-child(3){
+    
+        display: none;
+    
+    }
+
+    #NavBar-Child-Menu{
+    
+        width: 10%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        align-items: flex-end;
+        background-color: transparent;
+        border: none;
+        transition: ease-in-out 300ms;
+        outline: none;/*quitar la marca de enfocado del elemento*/
+    
+    }
+
+    #NavBar-Child-Menu:hover{
+    
+     
+        cursor: pointer;
+        transform: translate(1px, -1px);
+
+    }
+
+    
+    .NavBar-Child-Svg:nth-child(1) {
+        
+        transform: scale(1.2);
+     
+    }
+
+    .NavBar-Child-Svg:nth-child(2) {
+        
+        transform: scale(1);
+     
+    }
+    
+    .NavBar-Logo{
+    
+        margin: 30px 0px 0px 10%;
+        transition: ease-in-out 300ms;
+
+    }
+    
+    .NavBar-Logo:hover{
+    
+        cursor: pointer;
+        transform: translate(1px, -1px);
+    
+    }
+    
+    .NavBar-Links{
+
+        position: absolute;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--Very-Light-Gray);
+        left: 20px;
+        top: 70px;
+        right: 20px;
+        bottom: 0px;
+        border-radius: 4px;
+        transition: height 600ms, opacity 400ms; /* Transition para la animación */
+        opacity: 0;
+        padding: 0px;
+        text-align: center;
+        
+    }
+    
+    .NavBar-Links-Childs{
+    
+        border-bottom: 4px solid transparent;
+        margin-left: 0%;
+        font-weight: 700;
+        transition: ease-in-out 200ms;
+        flex-grow: 1;
+        padding-top: 2vh;
+        color: black;
+    
+    }
+    
+    .NavBar-Links-Childs:hover{
+    
+        cursor: pointer;
+        border-bottom: 4px solid transparent;
+        color: rgba(0, 0, 0, 0.350);
+        transform: translate(1px, -1px);
+    
+    }
+
+    .NavBar-Links-Childs:focus{
+    
+        border-bottom: 4px solid transparent;
+        color: rgba(0, 0, 0, 0.350);
+     
+    }
+    
+    
+    .Button-Request-Invite1{
+    
+        border: none;
+        margin: 16px 0px 0px 40%;
+        padding: 10px 25px 10px 25px;
+        border-radius: 25px;
+        background: linear-gradient(90deg, var(--Lime-Green-Color), var(--Bright-Cyan-Color));
+        color: white;
+        font-weight: 700;
+        font-size: 14px;
+        transition: ease-in-out 250ms;
+    
+    }
+    
+    .Button-Request-Invite1:hover{
+        
+        cursor: pointer;
+        opacity: 0.6;
+    
+    }
+
+}
+
+@media (min-width: 1001px) and (max-width: 1100.99px){
+
+    .NavBar-Child:nth-child(1){
+        
+        width: 25%;
+    }
+
+
+    .NavBar-Child:nth-child(2){
+        
+        width: 45%;
+
+    }
+
+    .NavBar-Child:nth-child(3){
+        
+        width: 35%;
+
+    }
+
+}
+
+@media (min-width: 1101px) and (max-width: 1200.99px){
+
+    .NavBar-Child:nth-child(1){
+        
+        width: 30%;
+    }
+
+
+    .NavBar-Child:nth-child(2){
+        
+        width: 40%;
+
+    }
+
+    .NavBar-Child:nth-child(3){
+        
+        width: 30%;
+
+    }
+
+}
+
+@media (min-width: 1201px) and (max-width: 1300.99px){
+
+    .NavBar-Child:nth-child(1){
+        
+        width: 30%;
+    }
+
+
+    .NavBar-Child:nth-child(2){
+        
+        width: 40%;
+
+    }
+
+    .NavBar-Child:nth-child(3){
+        
+        width: 30%;
+
+    }
 
 }

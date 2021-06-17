@@ -1,9 +1,5 @@
 import React from 'react';
 import './SectionOne.css';
-import IconOnline from './img/icon-online.svg';
-import IconBudgeting from './img/icon-budgeting.svg';
-import IconOnboarding from './img/icon-onboarding.svg';
-import IconApi from './img/icon-api.svg';
 
 
 function SectionOne() {

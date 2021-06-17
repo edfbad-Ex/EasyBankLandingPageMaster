@@ -61,6 +61,7 @@
     font-size: 14px;
     transition: ease-in-out 250ms;
     position: absolute;
+    outline: none;/*quitar la marca de enfocado del elemento*/
 
 }
 
@@ -90,5 +91,172 @@
     transform: scale(1);
     margin: 90px 0px 0px 180px;
     
+
+}
+
+@media (min-width: 0px) and (max-width: 1000.99px){
+
+    .Container-Banner{
+    
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    }
+
+    .Banner{
+
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .Banner-Text{
+
+        flex-grow: 1;
+        width: 100%;
+        padding: 120% 0px 0px 0px;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+
+    }
+
+    .Banner-Text-Content{
+
+        list-style: none;
+        margin: 0px;
+        padding: 0px 20px 0px 20px;
+
+    }
+
+    .Banner-Text-Content-Child:nth-child(1){
+
+        font-size: 35px;
+        font-weight: bold;
+
+    }
+
+    .Banner-Text-Content-Child:nth-child(2){
+
+
+
+    }
+
+    .Banner-Text-Content-Child:nth-child(3){
+
+
+
+    }
+
+    .Button-Request-Invite2{
+
+        border: none;
+        margin: 10px 0px 0px 0px;
+        padding: 10px 25px 10px 25px;
+        border-radius: 25px;
+        background: linear-gradient(90deg, var(--Lime-Green-Color), var(--Bright-Cyan-Color));
+        color: white;
+        font-weight: 700;
+        font-size: 14px;
+        transition: ease-in-out 250ms;
+        position: relative;
+
+    }
+
+    .Button-Request-Invite2:hover{
+
+        cursor: pointer;
+        opacity: 0.6;
+
+    }
+
+    .Banner-Image{
+
+        background: url("./img/bg-intro-desktop.svg") center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 520px;
+        margin: -137px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+    }
+
+    .Banner-Mockup{
+
+        width: 100%;
+        height: auto;
+        position: absolute;
+        transform: scale(1);
+        margin: 80px 0px 0px 0px;
+        
+
+    }
+
+}
+
+@media (min-width: 401px) and (max-width: 500.99px){
+
+    .Banner-Image{
+
+        width: 100%;
+        height: 620px;
+    }
+
+}
+
+@media (min-width: 501px) and (max-width: 600.99px){
+
+    .Banner-Image{
+
+        width: 100%;
+        height: 770px;
+    }
+
+}
+
+@media (min-width: 601px) and (max-width: 700.99px){
+
+    .Banner-Image{
+
+        width: 100%;
+        height: 900px;
+    }
+
+}
+
+@media (min-width: 701px) and (max-width: 800.99px){
+
+    .Banner-Image{
+
+        width: 100%;
+        height: 1040px;
+    }
+
+}
+
+@media (min-width: 801px) and (max-width: 900.99px){
+
+    .Banner-Image{
+
+        width: 100%;
+        height: 1170px;
+    }
+
+}
+
+@media (min-width: 901px) and (max-width: 1000.99px){
+
+    .Banner-Image{
+
+        width: 100%;
+        height: 1300px;
+    }
 
 }
